@@ -7,6 +7,7 @@ const logger = require("morgan");
 const PORT = process.env.PORT || 4002;
 
 const db = require("./models");
+require("./routes/student.routes")(app);
 
 db.mongoose
   .connect(db.url)
